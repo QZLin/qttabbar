@@ -4,9 +4,10 @@ name: QTTabBar
 
 on:
   push:
-    branches: [ vs2019 ]
+#     branches: [ vs2019 ]
    # tags:
     #- 'v*'
+  workflow_dispatch:
 
 jobs:
 
