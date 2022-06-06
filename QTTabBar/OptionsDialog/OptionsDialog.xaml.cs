@@ -136,9 +136,22 @@ namespace QTTabBarLib {
         #endregion
 
         private OptionsDialog() {
+            try {
             Initialized += (sender, args) => Topmost = true;
             ContentRendered += (sender, args) => Topmost = false;
             InitializeComponent();
+
+            // 设置默认的title 和版本
+            string str = QTUtility.CurrentVersion.ToString();
+            if (QTUtility.BetaRevision.Major > 0)
+            {
+                str = str + " Beta " + QTUtility.BetaRevision.Major;
+            }
+            else if (QTUtility.BetaRevision.Minor > 0)
+            {
+                str = str + " Alpha " + QTUtility.BetaRevision.Minor;
+            }
+            this.Title += str; //  +"_" + QTUtility2.MakeVersionString();
 
             int i = 0;
             tabbedPanel.ItemsSource = new OptionsDialogTab[] {
@@ -177,7 +190,13 @@ namespace QTTabBarLib {
 
             //////////// setting by qwop .
             setByQwop();
-        }
+             }
+            catch (Exception exception)
+            {
+                QTUtility2.MakeErrorLog(exception, "Options13_Language InitializeConfig");
+
+            }
+}
 
 
         #region setting by qwop
@@ -207,6 +226,7 @@ namespace QTTabBarLib {
 
             ////////////////////////////////////////
             // generateInitConfig();
+            
         }
 
         /// <summary>

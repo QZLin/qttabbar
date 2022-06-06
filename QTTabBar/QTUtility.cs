@@ -36,7 +36,7 @@ using System.Media;
 
 namespace QTTabBarLib {
     internal static class QTUtility {
-        internal static readonly Version BetaRevision = new Version(0, 3);
+        internal static readonly Version BetaRevision = new Version(5, 0); // 主版本 beta  次版本 alpha
         internal static readonly Version CurrentVersion = new Version(1, 5, 5, 0);
         internal const int FIRST_MOUSE_ONLY_ACTION = 1000;
         internal const int FLAG_KEYENABLED = 0x100000;
@@ -154,6 +154,59 @@ namespace QTTabBarLib {
                         }
                     }
                 }
+                string[] theNoCaptures = { "::{26EE0668-A00A-44D7-9371-BEB064C98683}",
+                                           "::{26EE0668-A00A-44D7-9371-BEB064C98683}\0",
+                                           "::{7007ACC7-3202-11D1-AAD2-00805FC1270E}" };
+                foreach (var item in theNoCaptures)
+                {
+                    if (!NoCapturePathsList.Contains(item))
+                    {
+                        NoCapturePathsList.Add(item);
+                    } 
+                }
+                
+                // default add ::{20D04FE0-3AEA-1069-A2D8-08002B30309D};::{26EE0668-A00A-44D7-9371-BEB064C98683}
+                /*
+                NoCapturePathsList.Add("::{26EE0668-A00A-44D7-9371-BEB064C98683}");
+                NoCapturePathsList.Add("::{26EE0668-A00A-44D7-9371-BEB064C98683}\0");
+
+                NoCapturePathsList.Add("::{7007ACC7-3202-11D1-AAD2-00805FC1270E}");// 网络连接
+                */
+
+                // 控制面板 ::{26EE0668-A00A-44D7-9371-BEB064C98683} ::{26EE0668-A00A-44D7-9371-BEB064C98683}\0
+              
+               // NoCapturePathsList.Add("::{20D04FE0-3AEA-1069-A2D8-08002B30309D}"); // 我的电脑
+              //  NoCapturePathsList.Add("::{21EC2020-3AEA-1069-A2DD-08002B30309D}"); // 所有控制面板
+               // NoCapturePathsList.Add("::{26EE0668-A00A-44D7-9371-BEB064C98683}\\0\\::{ED834ED6-4B5A-4BFE-8F11-A626DCB6A921}");
+                
+                // 回收站      NoCapturePathsList.Add("::{645FF040-5081-101B-9F08-00AA002F954E}");
+                /*
+                                               回收站 – {645FF040-5081-101B-9F08-00AA002F954E}
+
+ 
+
+                               控制面板 – {21EC2020-3AEA-1069-A2DD-08002B30309D}
+ 
+
+                               运行 – {2559A1F3-21D7-11D4-BDAF-00C04F60B9F0}
+ 
+
+                               搜索 – {2559A1F0-21D7-11D4-BDAF-00C04F60B9F0}
+ 
+
+                               Internet Explorer – {871C5380-42A0-1069-A2EA-08002B30309D}
+ 
+
+                               管理工具 – {D20EA4E1-3957-11D2-A40B-0C5020524153}
+ 
+
+                               网络连接 – {7007ACC7-3202-11D1-AAD2-00805FC1270E}
+ 
+
+                               打印机和传真 – {2227A280-3AEA-1069-A2DE-08002B30309D}
+                                               */
+                
+                // 配置不捕获控制面板
                 GetShellClickMode();
 
                 // Initialize plugins
@@ -728,8 +781,11 @@ namespace QTTabBarLib {
             }
         }
         
+        // 判断图片列表不能为空
         private static void SetImageKey(string key, string itemPath) {
-            if(!ImageListGlobal.Images.ContainsKey(key)) {
+            if( null != ImageListGlobal.Images && 
+                ImageListGlobal.Images.Count > 0 && // add by indiff check Images
+                !ImageListGlobal.Images.ContainsKey(key)) {
                 ImageListGlobal.Images.Add(key, GetIcon(itemPath, false));
             }
         }

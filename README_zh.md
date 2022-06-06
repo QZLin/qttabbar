@@ -1,9 +1,11 @@
+- 🎉🎉🎉**公告：迁移net4.0工作已经完成，近期会发布最新版本，修复适配dpi、迁移vs2022编译、打开文件选中等功能,同时性能会有所提升**
 - [汉化GitHub modify by indiff](https://openuserjs.org/scripts/indiff/GitHub_%E6%B1%89%E5%8C%96%E6%8F%92%E4%BB%B6_(indiff)%E4%BF%AE%E6%94%B9)
 - [生成chm格式数据库文档 modify by indiff](https://github.com/indiff/DBCHM)
 
- [![Download qttabbar2](https://img.shields.io/sourceforge/dt/qttabbar2.svg)](https://sourceforge.net/projects/qttabbar2/files/v1.5.5.3/QTTabBar%20Setup_1.5.5.3Beta_en%282021%29.zip/download)
-![GitHub all releases](https://img.shields.io/github/downloads/indiff/qttabbar/total)
-# 软件介绍/Introduction
+ [![Download qttabbar2](https://img.shields.io/sourceforge/dt/qttabbar2.svg)](https://sourceforge.net/projects/qttabbar2/files/1.5.5.4-beta/QTTabBar%20Setup_1.5.5.4Beta_zh%282022%29.zip/download)
+[![GitHub all releases](https://img.shields.io/github/downloads/indiff/qttabbar/total)](https://github.com/indiff/qttabbar/releases/tag/1.5.5.4-beta)
+ 
+ # 介绍 [English](README.md)
 ![qttabbar2](https://user-images.githubusercontent.com/501276/131287626-fe8f1fdd-a894-43f8-9620-b7145d70936d.gif)
 
 1. QTTabBar国内优化版是基于  sf.net/projects/qttabbar/ (2012-06-17)  提交的最新代码改版的。这个版本原作者没有发布过，具体不知道什么原因。增添一些汉化特性，主要是为了方便国内用户使用；另外日本作者维护的Quizo官网版本的捕获窗口一直用着不习惯，所以该版本保留了捕获窗口这个好用的功能。
@@ -16,6 +18,7 @@
 - [SourceForge主页](https://sourceforge.net/projects/qttabbar2/)
 
 # 版本更新/Changes
+- [1.5.5.4-beta(2022)😊](https://github.com/indiff/qttabbar/releases/tag/v1.5.5.4-beta) 忽略控制面板捕获
 - [1.5.5.3-beta(2021)😊](https://github.com/indiff/qttabbar/releases/tag/v1.5.5.3) 添加设置Java工具集环境变量工具;添加巴西语支持
 - [1.5.5.2-beta(2021)😊](https://github.com/indiff/qttabbar/releases/tag/1.5.5.2-beta) 添加内置德语;修正版本号错误
 - [1.5.5.1-beta(2021)](https://github.com/indiff/qttabbar/releases/tag/v1.5.5.2021-beta) 添加德语安装包，修复大量翻译错误
@@ -30,7 +33,7 @@
 - [1.0](https://github.com/indiff/qttabbar/releases/tag/1.0) 内置汉化语言选项
 
 # 下载地址/Download
-* [qttabbar最新版本](https://github.com/indiff/qttabbar/releases/tag/v1.5.5.3)
+* [qttabbar最新版本](https://github.com/indiff/qttabbar/releases/tag/1.5.5.4-beta)
 * [qttabbar Chinese mirror](https://gitee.com/qwop/qttabbar/attach_files)
 * [qttabbar国内镜像](https://gitee.com/qwop/qttabbar/attach_files)
 * [![Download qttabbar2](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/qttabbar2/files/latest/download)
@@ -65,8 +68,9 @@
 * [英文配置文件/English Language File](https://raw.githubusercontent.com/indiff/qttabbar/master/Lng_QTTabBar_en.xml)
 * [中文配置文件/Chinese Language File](https://raw.githubusercontent.com/indiff/qttabbar/master/Lng_QTTabBar_zh.xml)
 
-# QQ交流群/QQ Group
-* 群号: [157604022](https://qm.qq.com/cgi-bin/qm/qr?k=AGA5sh_6eCEYIwofpvazRxMFin8jmVI2&jump_from=webapi)
+# QQ交流群/QQ Group（1群已满）🦚
+* 1群（已满）: [157604022](https://qm.qq.com/cgi-bin/qm/qr?k=AGA5sh_6eCEYIwofpvazRxMFin8jmVI2&jump_from=webapi)
+* 2群: [963211351](https://jq.qq.com/?_wv=1027&k=VCPD2zLH)
 
 # 鸣谢/Thanks
 * [原作者Quizo](https://twitter.com/QTTabBar)
